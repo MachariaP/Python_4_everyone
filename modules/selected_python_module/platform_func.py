@@ -5,8 +5,10 @@ The platform module lets you access the underlying platform's data,
 i.e., hardware, operating system, and interpreter version information.
 """
 
-from platform import platform
+from platform import platform, machine, processor, system, version
 
-print(platform())
-print(platform(1))
-print(platform(0, 1))
+print("Platform:", platform())
+print("Machine:", machine())
+print("Processor:", processor())
+print("System:", system())
+print("Version:", version())
