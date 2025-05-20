@@ -1,0 +1,62 @@
+## Working with RESTful APIs
+============================
+
+# REST (Representational State Transfer)
+- Is an architectural style for designing networked applications, particularly
+  web-based systems.
+- It relies on stateless, client-server communication, typically over HTTP,
+  using standard methods like GET, POST, PUT and DELETE.
+- REST relies on sockets to send and receive data over the internet. For
+  example, when you use a web browser to visit a website or an app to fetch
+  data from an API, sockets are the underlying mechanism enabling that
+  communication.
+
+# A breakdown of REST:
+  1. Representational:
+    - Data or states are represented as plain text (often JSON or XML)
+    - Then they are sent/received over the network.
+    - It doesn't transfer objects but their representations.
+
+  2. State:
+    - Refers to the current condition of a resource (e.g., a user profile or
+      product data) stored on a server.
+
+  3. Transfer:
+    - The network (usually the internet) acts as a carrier to send these
+     representations or state-changing actions between client and server.
+
+----------------
+**Key Idea**
+----------------
+- REST enables interaction with server-hosted resources by transferring
+  their state representations via standardized protocals, without direct
+  method calls.
+- It's foundational for APIs and web services, ensuring scalability and
+  simplicity.
+
+## What Are BSD Sockets?
+=========================
+
+** Imagine you want to send a letter to a friend in another city. You need a
+   mailbox (an endpoint) to send it from and another mailbox for your friend
+   to receive it.
+   In the world of of computers, BSD sockets are like these mailboxes for
+   programs.
+   They are not physical; They are software interfaces that let programs send
+   and receive data over a network, like the Internet, or even within the same
+   computer.
+**
+
+- BSD sockets originated in 1983 at the University of California, Berkeley.
+- They are a standardized interface for network communication, adopted by
+  POSIX as POSIX sockets.
+- They act as endpoints for sending and receiving data over a network, like
+  the internet, allowing programs (e.g., in Python) to exchange messages
+  with remote systems.
+- Based on the Unix philosophy of "everything is a file,"sockets function like
+  files:
+	- writing to a socket sends data.
+	- reading from it retrives data.
+- Sockets form the foundation for network programming, including REST-based
+  systems.
+  
