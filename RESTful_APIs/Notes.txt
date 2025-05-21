@@ -93,3 +93,40 @@
 
    - Most Internet-based applications, like web browsers, email clients, or
      REST APIs use INET sockets to communicate across systems.
+
+
+## Socket Address: Finding the Right Mailbox
+=============================================
+- For two programs to communicate via sockets, they need to know exactly where
+  to send and receive data. This is where a socket address comes in.
+- In the INET domain, a socket address is like a full postal address, made
+  up of two parts:
+    1. IP Address:
+      - A unique identifier for a computer (or device) on a TCP/IP network,
+        like the internet.
+      - IPv4 Format: Is a 32-bit number written as four numbers (0-255) separated
+        by dots, e.g., 192.168.1.1 or 87.98.239.87. Each number represents
+        8 bits (a byte).
+      - IPv6 Note: There's a newer standard(IPv6) with 128-bit addresses
+        (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334), but it's less common.
+
+      **
+        Think of the IP address as the street address of a house. It tells you
+        which computer to send data to.
+        When you visit google.com, your computer resolves it to an IP address
+        like 142.250.190.78 to locate Google's server.
+      **
+
+    2. Port Number (Service Number):
+      - A 16-bit number (0 to 65,535) that identifies a specific socket on a computer.
+      
+      **
+        If the IP address is the streer address, the port number is the specific
+        appartment number in a building. It tells you which program (e.g., a web
+        server or email server) to deliver the data to.
+      **
+
+      - Many services use well-known port numbers, e.g., HTTP (used by REST)
+        typically uses port 80, HTTPS uses port 443 and email (SMTP) uses port 25.
+      - A web server might be at 192.168.1.1:80 where 80 is the port for
+        HTTP traffic.
