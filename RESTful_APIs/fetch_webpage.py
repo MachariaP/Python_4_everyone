@@ -19,6 +19,16 @@ Our program will perform the following steps:
 """
 import socket
 
+# Get server address
 server_addr = input("What server do you want to connect to? ")
+
+# Create a TCP socket for INET domain
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to server on port 80 (HTTP)
 sock.connect((server_addr, 80))
+
+# Send HTTP GET request
+sock.send(b"GET / HTTP/1.1\r\nHost: " +
+          bytes(server_addr, "utf8") +
+          b"\r\nConnection: close\r\n\r\n")
