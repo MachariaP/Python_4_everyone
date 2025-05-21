@@ -130,3 +130,34 @@
         typically uses port 80, HTTPS uses port 443 and email (SMTP) uses port 25.
       - A web server might be at 192.168.1.1:80 where 80 is the port for
         HTTP traffic.
+
+## Protocols: The Rules of Communication
+==========================================
+
+- A protocol is a set of rules that ensures two programs can communicate
+  effectively, like a shared language or etiquette.
+- Without protocols, data sent through sockets would be like sending a letter
+  in a language the recipient doesn't understand. It wouldn't work.
+
+- A protocol defines how data is formatted, sent and received.
+- Examples:
+    1. TCP (Transmission Control Protocol):
+      - Ensures reliable, ordered delivery of data.
+      - It's like certified mail, where you know the letter arrived intact.
+
+    2. UDP (User Datagram Protocol):
+      - Faster but less reliable, like sending a postcard without confirmation
+        of delivery.
+
+    3. HTTP (HyperText Transfer Protocol):
+      - Built on TCP, it's the protocol REST uses for web communication.
+      - It defines how browsers and servers exchange requests (e.g., GET,
+        POST) and responses.
+
+------------------
+**REST and HTTP**
+------------------
+- Rest relies on HTTP, which uses TCP and INET sockets.
+- When you send a REST request (e.g., to GET /users/123), HTTP formats the
+  request, and sockets handle the actual data transfer over the network.
+
