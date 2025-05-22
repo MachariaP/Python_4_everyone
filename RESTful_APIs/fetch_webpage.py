@@ -19,18 +19,28 @@ Our program will perform the following steps:
 """
 import socket
 
-# Get server address
+# Get server address from user input
 server_addr = input("What server do you want to connect to? ")
 
-# Create a TCP socket for INET domain
+# Create a TCP socket for INET domain (IPv4, TCP-based connection)
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Connect to server on port 80 (HTTP)
 sock.connect((server_addr, 80))
 
-# Send HTTP GET request
+# Send HTTP GET request to retrive the root document
 sock.send(b"GET / HTTP/1.1\r\nHost: " +
           bytes(server_addr, "utf8") +
           b"\r\nConnection: close\r\n\r\n")
 
+# Receive the server's response (up to 10000 bytes)
 reply = sock.recv(10000)
+
+# Shut down the socket to end the connection
+sock.shutdown(socket.SHUT_RDWR)
+
+# Close the socket to end the connection
+sock.close()
+
+# Print the server's response (raw bytes representation)
+print(repr(reply))
