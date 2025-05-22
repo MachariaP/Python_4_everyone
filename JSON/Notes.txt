@@ -1,0 +1,22 @@
+## JSON in Python
+**JSON (JavaScript Object Notation) **
+
+- Is a lightweight, human-readable data format used for storing and exchanging
+  data between systems, especially in web applications.
+
+# Working with the JSON Module in Python
+=========================================
+
+- Python provides the built-in json module to handle JSON data.
+- It's simple, efficient, and widely used for parsing(reading) and generating(
+  writing) JSON.
+
+1. Parsing JSON (JSON to Python)
+  - Function: json.loads(string).
+   - Converts a JSON string to a Python object.
+   - Ensure the JSON string is valid or json.JSONDecodeError will be raised.
+   - Use try-except to handle parsing errors.
+
+2. Generating JSON (Python to JSON)
+  - Function: json.dumps(obj).
+   - Converts a Python object to a JSON string.
