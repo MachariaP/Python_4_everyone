@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- cars.xml - List of cars available for sale
+
+     Description: This XML file contains a collection of a car entries, each detailing
+     a car available for sale. Each car entry includes a unique identifier, brand,
+     model, production year, and price with a specified currency.
+
+     Structure:
+	- cars_for_sale: Root element containing all car rntries.
+	- car: Element representing an individual car.
+	   - id: Unique identifier for the car (integer).
+	   - brand: Manufacturer of the car (string).
+	   - model: Model name of the car (string).
+	   - production_year: Year the car was manufactured (integer).
+	   - price: Price of the car (integer) with a 'currency' attribute (string, e.g., 'USD', 'GBP')
+     DTD: Conforms to the structure defined in cars.dtd.
+-->
+<!DOCTYPE cars_for_sale SYSTEM "cars.dtd">
+<cars_for_sale>
+	<car>
+		<id>1</id>
+		<brand>Ford</brand>
+		<model>Mustang</model>
+		<production_year>1972</production_year>
+		<price currency="USD">35900</price>
+	</car>
+	<car>
+		<id>2</id>
+		<brand>Aston Martin</brand>
+		<model>Rapide</model>
+		<production_year>2010</production_year>
+		<price currency="GBP">32000</price>
+	</car>
+</cars_for_sale>
