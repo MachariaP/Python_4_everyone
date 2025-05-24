@@ -10,7 +10,8 @@ except requests.RequestException:
     print("Communication error")
 else:
     if reply.status_code == requests.codes.ok:
-        print(reply.text)
+        print(reply.headers['Content-Type'])
+        print(reply.json())
     else:
         # Handle non-200 status code (e.g., 404, 500)
         print("Server error")
